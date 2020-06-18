@@ -4,13 +4,8 @@ require('dotenv').config()
 ///initiate app;
 const express = require("express");
 const app = express()
-app.listen(process.env.PORT || 3000, () => {
-    console.log("is Connect")
-});
 
-app.get("/", (req, res) => {
-    res.send("reynaldAPi");
-})
+
 
 //initiate midleware
 
@@ -35,3 +30,14 @@ mongoose.connect("mongodb+srv://reynaldi:" + process.env.DB_PWD + "@cluster0-s8o
         console.log("DB Connect");
     }
 })
+
+
+//for router
+app.use(require("./router/user"));
+app.get("/", (req, res) => {
+    res.send("reynaldAPi");
+})
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log("is Connect")
+});
