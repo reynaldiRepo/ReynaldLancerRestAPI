@@ -17,7 +17,7 @@ user.get("/user", (req, res) => {
         (e, users) => {
             if (e) {
                 res.json({
-                    status: e
+                    status:false
                 })
             } else {
                 res.json(
@@ -35,7 +35,7 @@ user.post("/user/register", (req, res) => {
         (e) => {
             if (e) {
                 res.json({
-                    status: e
+                    status: false
                 })
             } else {
                 res.json({
@@ -51,7 +51,7 @@ user.post("/user/register", (req, res) => {
 user.post("/user/login", (req, res) => {
     console.log(req.body);
     user_model.find({
-        "_id": req.body.email,
+        "_id": req.body._id,
         "password": req.body.password
     }).exec(
         (e, users) => {

@@ -10,7 +10,7 @@ url = https://reynaldlancer-api.herokuapp.com/login
 ```Json
 data
   {
-  "email":youremail, 
+  "_id":youremail, 
   "password":yourpasswoed
   }
 
