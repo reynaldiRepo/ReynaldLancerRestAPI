@@ -80,6 +80,7 @@ user.post("/user/login", (req, res) => {
 
 //get user data
 user.get("/user/get", (req, res) => {
+    console.log(req.query._id)
     user_model.find({
         "_id": req.query._id    
     }).exec(
@@ -89,9 +90,8 @@ user.get("/user/get", (req, res) => {
                     status: false
                 })
             } else {
-                data.status = true
                 res.json({data})
-            }
+            }   
         }
     )
 })
