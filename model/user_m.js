@@ -25,6 +25,10 @@ const user = new schema({
     "saldo":{
         type:Number,
         default:0
+    },
+    "photo_profile":{
+        type:String,
+        default:"default.png"
     }
 
 })
