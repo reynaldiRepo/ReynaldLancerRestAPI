@@ -29,6 +29,14 @@ const user = new schema({
     "photo_profile":{
         type:String,
         default:"default.png"
+    },
+    "gender":{
+        type:String,
+        default:"L"
+    },
+    "info_tambahan":{
+        type:String,
+        default:""
     }
 
 })

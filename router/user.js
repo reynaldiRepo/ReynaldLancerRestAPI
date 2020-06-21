@@ -82,19 +82,22 @@ user.post("/user/login", (req, res) => {
 user.get("/user/get", (req, res) => {
     console.log(req.query._id)
     user_model.find({
-        "_id": req.query._id    
+        "_id": req.query._id
     }).exec(
-        (e, data)=> {
+        (e, data) => {
             if (e) {
                 res.json({
                     status: false
                 })
             } else {
                 res.json(data[0])
-            }   
+            }
         }
     )
 })
 
-//end_login
+
+
+
+
 module.exports = user
