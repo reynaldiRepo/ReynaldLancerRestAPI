@@ -17,7 +17,7 @@ user.get("/user", (req, res) => {
         (e, users) => {
             if (e) {
                 res.json({
-                    status:false
+                    status: false
                 })
             } else {
                 res.json(
@@ -73,6 +73,24 @@ user.post("/user/login", (req, res) => {
                         data: users
                     })
                 }
+            }
+        }
+    )
+})
+
+//get user data
+user.get("/user/get", (req, res) => {
+    user_model.find({
+        "_id": req.query._id
+    }).exec(
+        (e, data) {
+            if (e) {
+                res.json({
+                    status: false
+                })
+            } else {
+                data.status = true
+                res.json({data})
             }
         }
     )
