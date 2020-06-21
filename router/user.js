@@ -90,7 +90,7 @@ user.get("/user/get", (req, res) => {
                     status: false
                 })
             } else {
-                res.json({data})
+                res.json(data[0])
             }   
         }
     )
