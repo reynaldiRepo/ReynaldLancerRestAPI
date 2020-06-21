@@ -81,9 +81,9 @@ user.post("/user/login", (req, res) => {
 //get user data
 user.get("/user/get", (req, res) => {
     user_model.find({
-        "_id": req.query._id
+        "_id": req.query._id    
     }).exec(
-        (e, data) {
+        (e, data)=> {
             if (e) {
                 res.json({
                     status: false
