@@ -37,6 +37,10 @@ const user = new schema({
     "info_tambahan":{
         type:String,
         default:""
+    }, 
+    "domisili" : {
+        type : String,
+        default : ""
     }
 
 })
