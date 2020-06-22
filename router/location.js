@@ -15,7 +15,7 @@ location.get("/loc/prov", (req, res)=>{
         if (e){
             res.json({status:false});
         }else{
-            res.json(body.body.provinsi);
+            res.json(body.body);
         }
     })
 })
