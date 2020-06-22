@@ -34,6 +34,7 @@ mongoose.connect("mongodb+srv://reynaldi:" + process.env.DB_PWD + "@cluster0-s8o
 
 //for router
 app.use(require("./router/user"));
+app.use(require("./router/location"));
 app.get("/", (req, res) => {
     res.send("reynaldAPi");
 })

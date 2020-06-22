@@ -10,7 +10,7 @@ location.use(bodyParser.urlencoded({
 // parse application/json
 location.use(bodyParser.json())
 
-location.get("/loc/prov"){
+location.get("/loc/prov", (req, res)=>{
     request("http://dev.farizdotid.com/api/daerahindonesia/provinsi", (e, body)=>{
         if (e){
             res.json({status:false});
@@ -18,4 +18,6 @@ location.get("/loc/prov"){
             res.json(body);
         }
     })
-}
+})
+
+module.exports = location;
