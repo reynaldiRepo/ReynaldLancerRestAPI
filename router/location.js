@@ -10,35 +10,53 @@ location.use(bodyParser.urlencoded({
 // parse application/json
 location.use(bodyParser.json())
 
-location.get("/loc/prov", (req, res)=>{
-    request("https://emsifa.github.io/api-wilayah-indonesia/api/provinces.json", (e, body)=>{
-        if (e){
-            res.json({status:false});
-        }else{
+location.get("/loc/prov", (req, res) => {
+    request("https://emsifa.github.io/api-wilayah-indonesia/api/provinces.json", (e, body) => {
+        if (e) {
+            res.json({
+                status: false
+            });
+        } else {
             res.json(JSON.parse(body.body));
         }
     })
 })
 
-location.get("/loc/kota", (req, res)=>{
-    request("https://emsifa.github.io/api-wilayah-indonesia/api/regencies/"+req.query.prov+".json", (e,body)=>{
-        if(e){
-            res.json({status:false});
-        }else{
+location.get("/loc/kota", (req, res) => {
+    request("http://emsifa.github.io/api-wilayah-indonesia/api/regencies/" + req.query.prov + ".json", (e, body) => {
+        if (e) {
+            res.json({
+                status: false
+            });
+        } else {
             res.json(JSON.parse(body.body));
         }
     })
 })
 
-location.get("/loc/kota", (req, res)=>{
-    request("https://emsifa.github.io/api-wilayah-indonesia/api/districts/"+req.query.kab+".json", (e, body)=>{
-        if(e){
-            res.json({status:false})
-        }else{
+
+location.get("/loc/kec/", (req, res) => {
+    request("http://emsifa.github.io/api-wilayah-indonesia/api/districts/" + req.query.kab + ".json", (e, body) => {
+        if (e) {
+            res.json({
+                status: false
+            })
+        } else {
             res.json(JSON.parse(body.body))
         }
     })
 })
 
+location.get("/loc/des/", (req, res) => {
+    request("http://emsifa.github.io/api-wilayah-indonesia/api/villages/" + req.query.kec + ".json", (e, body) => {
+        if (e) {
+            res.json({
+                status: false
+            })
+        } else {
+            res.json(JSON.parse(body.body))
+        }
+    })
+})
 
 module.exports = location;
