@@ -96,6 +96,19 @@ user.get("/user/get", (req, res) => {
     )
 })
 
+//update_user
+user.post("/user/update", (req, res)=>{
+    user_model.findByIdAndUpdate({_id:req.body._id},req.body).exec(
+        (e)=>{
+            if(e){
+                res.json({"status":false, "msg":e});
+            }else{
+                res.json({"status":true});
+            }
+        }
+    )
+})
+
 
 
 
