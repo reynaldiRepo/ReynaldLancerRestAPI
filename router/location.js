@@ -11,13 +11,34 @@ location.use(bodyParser.urlencoded({
 location.use(bodyParser.json())
 
 location.get("/loc/prov", (req, res)=>{
-    request("http://dev.farizdotid.com/api/daerahindonesia/provinsi", (e, body)=>{
+    request("https://emsifa.github.io/api-wilayah-indonesia/api/provinces.json", (e, body)=>{
         if (e){
             res.json({status:false});
         }else{
-            res.json(body.body);
+            res.json(JSON.parse(body.body));
         }
     })
 })
+
+location.get("/loc/kota", (req, res)=>{
+    request("https://emsifa.github.io/api-wilayah-indonesia/api/regencies/"+req.query.prov+".json", (e,body)=>{
+        if(e){
+            res.json({status:false});
+        }else{
+            res.json(JSON.parse(body.body));
+        }
+    })
+})
+
+location.get("/loc/kota", (req, res)=>{
+    request("https://emsifa.github.io/api-wilayah-indonesia/api/districts/"+req.query.kab+".json", (e, body)=>{
+        if(e){
+            res.json({status:false})
+        }else{
+            res.json(JSON.parse(body.body))
+        }
+    })
+})
+
 
 module.exports = location;

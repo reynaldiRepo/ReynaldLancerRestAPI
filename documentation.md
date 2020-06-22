@@ -3,9 +3,9 @@
 ## USER FUNCTION
 
 base url : https://reynaldlancer-api.herokuapp.com/
-### Get All User 
+### Get All User (GET) 
 url = https://reynaldlancer-api.herokuapp.com/user
-### Login 
+### Login (POST)
 url = https://reynaldlancer-api.herokuapp.com/login 
 ```Json
 data
@@ -15,7 +15,7 @@ data
   }
 
 ```
-### register 
+### register (POST)
 url = https://reynaldlancer-api.herokuapp.com/user/register
 ``` json
 {
@@ -34,14 +34,19 @@ url = https://reynaldlancer-api.herokuapp.com/user/register
     },
     "password":{
         type:String
-    },
-    "ratting":{
-        type:Number,
-        default:0
-    },
-    "saldo":{
-        type:Number,
-        default:0
     }
 }
 ```
+### get_user (GET)
+url = https://reynaldlancer-api.herokuapp.com/user/get
+```Json
+{
+    "_id":String
+}
+```
+
+## LOCATION API
+
+### Provinsi (GET)
+url = 
+
