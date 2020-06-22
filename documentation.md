@@ -48,5 +48,20 @@ url = https://reynaldlancer-api.herokuapp.com/user/get
 ## LOCATION API
 
 ### Provinsi (GET)
-url = 
+url = https://reynaldlancer-api.herokuapp.com/loc/prov
+### kabupaten kota (GET)
+url = https://reynaldlancer-api.herokuapp.com/loc/kota 
+```
+ @Query(prov) 
+```
 
+### kecamata (GET)
+url = https://reynaldlancer-api.herokuapp.com/loc/kec
+```
+@Query(kab)
+```
+### desa (GET)
+url = https://reynaldlancer-api.herokuapp.com/loc/desa
+```
+@Query(kec)
+```
