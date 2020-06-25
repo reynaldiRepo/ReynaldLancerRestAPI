@@ -2,9 +2,6 @@ const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
 const skill = new schema({
-    "_id":{
-        type:String
-    },
     "user_id":{
         type:String
     },
