@@ -12,6 +12,7 @@ user.use(bodyParser.json())
 
 //for test -------------------------------
 let user_model = require("../model/user_m");
+let skill_model = require("../model/skill_user_m")
 user.get("/user", (req, res) => {
     user_model.find().exec(
         (e, users) => {
@@ -97,20 +98,66 @@ user.get("/user/get", (req, res) => {
 })
 
 //update_user
-user.post("/user/update", (req, res)=>{
-    user_model.findByIdAndUpdate({_id:req.body._id},req.body).exec(
-        (e)=>{
-            if(e){
-                res.json({"status":false, "msg":e});
-            }else{
-                res.json({"status":true});
+user.post("/user/update", (req, res) => {
+    user_model.findByIdAndUpdate({
+        _id: req.body._id
+    }, req.body).exec(
+        (e) => {
+            if (e) {
+                res.json({
+                    "status": false,
+                    "msg": e
+                });
+            } else {
+                res.json({
+                    "status": true
+                });
             }
         }
     )
 })
 
 
+//get user skill
+user.get("/user/skill", (req, res) => {
+    skill_model.find({
+        "user_id": req.query.user_id
+    }).exec(
+        (e, skill) => {
+            if (e) {
+                res.json({
+                    "status": false
+                });
+            } else {
+                res.json(skill);
+            }
+        }
+    )
+})
 
+user.post("/user/add_skill", (req, res) => {
+    skill_model.create(req.body, (e) => {
+        if (e) {
+            res.json({
+                status: false
+            })
+        } else {
+            res.json({
+                status: true
+            });
+        }
+    })
+})
 
+user.post("/user/del_skill", (req, res) => {
+    skill_model.findByIdAndDelete({ "_id": req.body._id }).exec(e => {
+        if (e) {
+            res.json({ status: false });
+        } else {
+            res.json({ status: true });
+        }
+    })
+
+})
 
 module.exports = user
