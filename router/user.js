@@ -120,9 +120,7 @@ user.post("/user/update", (req, res) => {
 
 //get user skill
 user.get("/user/skill", (req, res) => {
-    skill_model.find({
-        "user_id": req.query.user_id
-    }).exec(
+    skill_model.find().exec(
         (e, skill) => {
             if (e) {
                 res.json({
