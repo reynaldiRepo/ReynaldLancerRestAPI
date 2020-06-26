@@ -120,7 +120,9 @@ user.post("/user/update", (req, res) => {
 
 //get user skill
 user.get("/user/skill", (req, res) => {
-    skill_model.find({"user_id":req.query.user_id}).exec(
+    skill_model.find({
+        "user_id": req.query.user_id
+    }).exec(
         (e, skill) => {
             if (e) {
                 res.json({
@@ -134,25 +136,54 @@ user.get("/user/skill", (req, res) => {
 })
 
 user.post("/user/add_skill", (req, res) => {
-    skill_model.create(req.body, (e) => {
+    skill_model.deleteMany({
+        "user_id": req.body.user_id
+    }).exec(e => {
         if (e) {
             res.json({
-                status: false
-            })
-        } else {
-            res.json({
-                status: true
+                status: false,
+                "msg": "failed_delete"
             });
+        } else {
+            let dataArr = req.body.data.split(',')
+            let skills = []
+            if (dataArr[0] != "") {
+                dataArr.forEach(element => {
+                    skills.push({
+                        "user_id": req.body.user_id,
+                        "skill": element
+                    });
+                });
+                skill_model.insertMany(skills, (e) => {
+                    if (e) {
+                        res.json({
+                            "status": false
+                        })
+                    } else {
+                        res.json({
+                            status: true
+                        })
+                    }
+                })
+            }else{
+                res.json({status:true})
+            }
         }
     })
 })
 
 user.post("/user/del_skill", (req, res) => {
-    skill_model.findByIdAndDelete({ "_id": req.body._id }).exec(e => {
+    skill_model.findByIdAndDelete({
+        "_id": req.body._id
+    }).exec(e => {
         if (e) {
-            res.json({ status: false });
+            res.json({
+                status: false
+            });
         } else {
-            res.json({ status: true });
+            res.json({
+                status: true
+            });
         }
     })
 
