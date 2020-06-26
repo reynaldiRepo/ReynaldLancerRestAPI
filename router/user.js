@@ -13,6 +13,7 @@ user.use(bodyParser.json())
 //for test -------------------------------
 let user_model = require("../model/user_m");
 let skill_model = require("../model/skill_user_m")
+let sosmed_model = require("../model/sosmed_m");
 user.get("/user", (req, res) => {
     user_model.find().exec(
         (e, users) => {
@@ -165,8 +166,8 @@ user.post("/user/add_skill", (req, res) => {
                         })
                     }
                 })
-            }else{
-                res.json({status:true})
+            } else {
+                res.json({ status: true })
             }
         }
     })
@@ -186,7 +187,42 @@ user.post("/user/del_skill", (req, res) => {
             });
         }
     })
+})
 
+
+//for sosmed
+user.get("/user/sosmed", (req, res) => {
+    sosmed_model.find({ "user_id": req.query.user_id }).exec(
+        (e, Usosmed) => {
+            if (e) {
+                res.json({ status: false });
+            } else {
+                res.json(Usosmed);
+            }
+        }
+    )
+})
+
+user.post("/user/add_sosmed", (req, res) => {
+    sosmed_model.create(req.body, e => {
+        if (e) {
+            res.json({ status: false });
+        } else {
+            res.json({ status: true })
+        }
+    })
+})
+
+user.post("/user/del_sosmed", (req, res) => {
+    sosmed_model.findByIdAndDelete({ "_id": req.body._id }).exec(
+        (e) => {
+            if (e) {
+                res.json({ status: false })
+            } else {
+                res.json({ status: true })
+            }
+        }
+    )
 })
 
 module.exports = user
