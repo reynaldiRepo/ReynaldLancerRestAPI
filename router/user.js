@@ -225,4 +225,16 @@ user.post("/user/del_sosmed", (req, res) => {
     )
 })
 
+user.post("/user/update_sosmed", (req, res)=>{
+    sosmed_model.findByIdAndUpdate({"_id":req.body._id}, {"link_sosmed":req.body.link}).exec(
+        e=>{
+            if(e){
+                res.json({status:false})
+            }else{
+                res.json({status:true})
+            }
+        }
+    )
+})
+
 module.exports = user
