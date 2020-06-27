@@ -10,10 +10,12 @@ user.use(bodyParser.urlencoded({
 // parse application/json
 user.use(bodyParser.json())
 
-//for test -------------------------------
+//for model -------------------------------
 let user_model = require("../model/user_m");
 let skill_model = require("../model/skill_user_m")
 let sosmed_model = require("../model/sosmed_m");
+let pendidikan_model = require("../model/pendidikan_user_m");
+
 user.get("/user", (req, res) => {
     user_model.find().exec(
         (e, users) => {
@@ -236,5 +238,51 @@ user.post("/user/update_sosmed", (req, res)=>{
         }
     )
 })
+
+//for pendidikan route
+user.get("/user/pendidikan", (req, res)=>{
+    pendidikan_model.find({"user_id":req.query.user_id}).exec(
+        (e, pend)=>{
+            if(e){
+                res.json({status:false})
+            }else{
+                res.json(pend)
+            }
+        }
+    )
+})
+
+user.post("/user/add_pendidikan", (req, res)=>{
+    pendidikan_model.create(req.body, (e)=>{
+        if(e){
+            res.json({status:false})
+        }else{
+            res.json({status:true})
+        }
+    })
+})
+
+user.post("user/update_pendidikan", (req, res)=>{
+    pendidikan_model.findByIdAndUpdate({"_id":req.body._id}, req.body).exec(
+        (e)=>{
+            if(e){
+                res.json({status:false})
+            }else{
+                res.json({status:true})
+            }
+        }
+    )
+})
+
+user.post("user/delete_pendidikan", (req, res)=>{
+    pendidikan_model.findOneAndRemove({"_id":req.body._id}, (e)=>{
+        if(e){
+            res.json({status:false})
+        }else{
+            res.json({status:true})
+        }
+    })
+})
+
 
 module.exports = user
