@@ -262,7 +262,7 @@ user.post("/user/add_pendidikan", (req, res)=>{
     })
 })
 
-user.post("user/update_pendidikan", (req, res)=>{
+user.post("/user/update_pendidikan", (req, res)=>{
     pendidikan_model.findByIdAndUpdate({"_id":req.body._id}, req.body).exec(
         (e)=>{
             if(e){
@@ -274,7 +274,7 @@ user.post("user/update_pendidikan", (req, res)=>{
     )
 })
 
-user.post("user/del_pendidikan", (req, res)=>{
+user.post("/user/del_pendidikan", (req, res)=>{
     pendidikan_model.findOneAndRemove({"_id":req.body._id}, (e)=>{
         if(e){
             res.json({status:false})
