@@ -284,5 +284,42 @@ user.post("/user/del_pendidikan", (req, res)=>{
     })
 })
 
+user.post("/user/tambah_saldo", (req, res)=>{
+    user_model.findByIdAndUpdate({"_id":req.body._id}, {$inc:{"saldo":req.body.jumlah}}).exec(
+        e=>{
+            if (e){
+                res.json({status:false});
+            }else{
+                res.json({status:true});
+            }
+        }
+    )
+})
+
+user.post("/user/tambah_saldo", (req, res)=>{
+    user_model.findByIdAndUpdate({"_id":req.body._id}, {$inc:{"saldo": parseInt(req.body.jumlah)}}).exec(
+        e=>{
+            if (e){
+                res.json({status:false});
+            }else{
+                res.json({status:true});
+            }
+        }
+    )
+})
+
+
+user.post("/user/tarik_saldo", (req, res)=>{
+    user_model.findByIdAndUpdate({"_id":req.body._id}, {$inc:{"saldo": -1 * parseInt(req.body.jumlah)}}).exec(
+        e=>{
+            if (e){
+                res.json({status:false});
+            }else{
+                res.json({status:true});
+            }
+        }
+    )
+})
+
 
 module.exports = user
