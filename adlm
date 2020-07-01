@@ -1,0 +1,215 @@
+[33mcommit a41cd08701d8bd1051b9ca944f6fc586e2253c7b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Wed Jul 1 20:19:17 2020 +0700
+
+    add transaksi saldo route
+
+[33mcommit 1e015704a7bd060d4200be72bce0b160b358211f[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Wed Jul 1 19:33:45 2020 +0700
+
+    add transaksi saldo route
+
+[33mcommit 5fd5c2e4a294b1dc7c1102e81ca1c07d4af069cf[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 29 19:28:02 2020 +0700
+
+    adding saldo function
+
+[33mcommit cd341b27bd81dce08cff52167af7e0110ecd3ba9[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 28 18:30:02 2020 +0700
+
+    fixing route
+
+[33mcommit e477b84090e814729245314bc398399a5a67644a[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 28 18:22:56 2020 +0700
+
+    adding delete pendidikan
+
+[33mcommit ab8bc72e7bc9054f6cc32d429a8056f638e3f21c[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 28 00:44:43 2020 +0700
+
+    add route pendidikan
+
+[33mcommit 2a680e19e6500229efd194ab6fb4c7c32b89f7c2[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 28 00:05:06 2020 +0700
+
+    adding update sosmed
+
+[33mcommit 5ec866086bd97fd1a0ba4a37717742b86b28c02b[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Fri Jun 26 21:31:02 2020 +0700
+
+    adding sosmed route
+
+[33mcommit 18247b7c3494f7179e8f3d0ad1d097df364f46b8[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Fri Jun 26 10:57:56 2020 +0700
+
+    fixing modul add skill
+
+[33mcommit 38473021d0d4a450f2c0f7ca3d0a8d5bee012e2d[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Thu Jun 25 21:39:38 2020 +0700
+
+    fixing model
+
+[33mcommit 8ea7a279ccf5fd90c2dd6d7fdfea3f8504488e68[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Thu Jun 25 21:32:39 2020 +0700
+
+    fixing model
+
+[33mcommit fc7bd82fd4349e3769dc5ad4b08d5ffbceb161e6[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Thu Jun 25 21:28:21 2020 +0700
+
+    fixing model
+
+[33mcommit 2b21e6911ba384ba0eb250cc40c91b75dba56889[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Thu Jun 25 14:37:33 2020 +0700
+
+    adding user skill route
+
+[33mcommit 077e78b12b17dab034e9d72a7adbeeeaafed0d24[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 21:06:28 2020 +0700
+
+    add update user
+
+[33mcommit 43c1aa3ecf86247c50f2c9f18e90b77b8b1c5d9c[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 13:31:28 2020 +0700
+
+    renamae doc to readme
+
+[33mcommit bfabba305d9514a657a607b2bb80c5185b5bd7cf[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 13:30:30 2020 +0700
+
+    fixing documentation
+
+[33mcommit e58d74b9d47669b497c118b07ea386a3ea15d027[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 13:25:23 2020 +0700
+
+    add api desa
+
+[33mcommit d65017e8beb13fdd3431dade347be4d46cb74d79[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 12:48:22 2020 +0700
+
+    finishing location API
+
+[33mcommit bda2f8d5cde5116482329435ef32960cb329cab2[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 11:27:16 2020 +0700
+
+    im suck
+
+[33mcommit 98f77cc6d5ec25e70fef246ec1a71207b737ca80[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 11:25:26 2020 +0700
+
+    something
+
+[33mcommit ddd0db52071ee0074a72a364521e8843e14aace5[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 11:23:46 2020 +0700
+
+    some alocation
+
+[33mcommit 147bde898c94d5db62fbe62a4d1b8c1a520a6b8d[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 11:22:37 2020 +0700
+
+    some
+
+[33mcommit c00fdad8b6cdfbc70a09b705047af941b412956b[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 11:20:31 2020 +0700
+
+    syntax fixing
+
+[33mcommit 2e62517a063c80f9000dfbef6551184fe7ac4155[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 11:17:51 2020 +0700
+
+    add wilayah indonesia api
+
+[33mcommit 73c76610f40bb508feeda0481b240eba67d6f420[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 10:33:33 2020 +0700
+
+    adding atribute to user model
+
+[33mcommit a6656f47a472f8a830aa9234e7ed849744fc1eb6[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Mon Jun 22 06:01:29 2020 +0700
+
+    adding some object to model
+
+[33mcommit b86af246249d958b22b09cc23a792114a369943a[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 21 13:57:25 2020 +0700
+
+    a senaky little syntax
+
+[33mcommit 396648627a2e98c3ec87cf2cc24ac15c8809025f[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 21 13:51:59 2020 +0700
+
+    fixing get user router
+
+[33mcommit 4b3e5e7f40fe61ae1d1011c5aea5d11b28244f24[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 21 13:38:41 2020 +0700
+
+    litle char
+
+[33mcommit dda4887e77d0323d5c332603b0943de27de14b2e[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 21 13:37:50 2020 +0700
+
+    add router for get user
+
+[33mcommit cebd7a287690c857c78bd342f88cc792a1ce749c[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sun Jun 21 12:04:58 2020 +0700
+
+    fixing user  model
+
+[33mcommit f67fdaad1296e4ee93d0c88c5a5af8ebe9deea7a[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Sat Jun 20 20:46:43 2020 +0700
+
+    fixing response register
+
+[33mcommit 40a7ce198ef0203ad06f4b720b56c2b43a051083[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Fri Jun 19 14:23:31 2020 +0700
+
+    adding documentation
+
+[33mcommit fedfe4552bede5d7e51a1331fddce6b9a6792a27[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Fri Jun 19 10:31:14 2020 +0700
+
+    add documentation
+
+[33mcommit b68f0e60000e8b3c728526d014d1737cbd0bfe6b[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Thu Jun 18 22:18:36 2020 +0700
+
+    user route
+
+[33mcommit 30844d3425a8dc76b0ec609bddcd2da16e096974[m
+Author: Reynaldi <38524172+reynaldiRepo@users.noreply.github.com>
+Date:   Wed Jun 17 21:28:12 2020 +0700
+
+    init
