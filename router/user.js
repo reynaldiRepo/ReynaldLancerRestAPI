@@ -15,6 +15,7 @@ let user_model = require("../model/user_m");
 let skill_model = require("../model/skill_user_m")
 let sosmed_model = require("../model/sosmed_m");
 let pendidikan_model = require("../model/pendidikan_user_m");
+let transaksi_saldo_model = require("../model/transaksi_saldo_m");
 
 user.get("/user", (req, res) => {
     user_model.find().exec(
@@ -313,6 +314,50 @@ user.post("/user/tarik_saldo", (req, res)=>{
     user_model.findByIdAndUpdate({"_id":req.body._id}, {$inc:{"saldo": -1 * parseInt(req.body.jumlah)}}).exec(
         e=>{
             if (e){
+                res.json({status:false});
+            }else{
+                res.json({status:true});
+            }
+        }
+    )
+})
+
+user.get("/user/get_transaksi_all", (req, res)=>{
+    transaksi_saldo_model.find({"user_id":req.query.user_id}).exec((e,data)=>{
+        if(e){
+            res.json({status:false});
+        }else{
+            res.json(data);
+        }
+    })
+})
+
+user.post("/user/create_transaksi", (req, res)=>{
+    transaksi_saldo_model.create(req.body, (e, data)=>{
+        if(e){
+            res.json({status:false});
+        }else{
+            res.json(data);
+        }
+    })
+})
+
+user.get("/user/get_transaksi", (req, res)=>{
+    transaksi_saldo_model.find({"_id":req.query._id}).exec(
+        (e, data)=>{
+            if(e){
+                res.json({status:false});
+            }else{
+                res.json(data)
+            }
+        }
+    )
+})
+
+user.post("/user/update_transaksi", (req, res)=>{
+    transaksi_saldo_model.findByIdAndUpdate({"_id":req.body._id}, req.body).exec(
+        (e, data)=>{
+            if(e){
                 res.json({status:false});
             }else{
                 res.json({status:true});
