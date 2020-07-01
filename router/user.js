@@ -348,7 +348,7 @@ user.get("/user/get_transaksi", (req, res)=>{
             if(e){
                 res.json({status:false});
             }else{
-                res.json(data)
+                res.json(data[0])
             }
         }
     )
