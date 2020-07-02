@@ -9,7 +9,8 @@ const transaksi = new schema({
         type:Number
     },
     "status":{
-        type:"String"
+        type:"String",
+        default:"PROSES"
     },
     "tanggal":{
         type:String

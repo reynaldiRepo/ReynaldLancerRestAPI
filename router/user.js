@@ -16,6 +16,7 @@ let skill_model = require("../model/skill_user_m")
 let sosmed_model = require("../model/sosmed_m");
 let pendidikan_model = require("../model/pendidikan_user_m");
 let transaksi_saldo_model = require("../model/transaksi_saldo_m");
+let model_tugas = require("../model/tugas_m");
 
 user.get("/user", (req, res) => {
     user_model.find().exec(
@@ -366,5 +367,40 @@ user.post("/user/update_transaksi", (req, res)=>{
     )
 })
 
+user.post("user/buat_tugas", (req, res)=>{
+    model_tugas.create(req.body).exec(
+        (e)=>{
+            if(e){
+                res.json({status:false});
+            }else{
+                res.json({status:true})
+            }
+        }
+    )
+})
+
+user.get("user/get_all_tugas", (req, res)=>{
+    model_tugas.find().exec(
+        (e, data)=>{
+            if(e){
+                res.json({status:false})
+            }else{
+                res.json(data)
+            }
+        }
+    )
+})
+
+user.get("user/get_tugas", (req, res)=>{
+    model_tugas.find({"_id":req.query._id}).exec(
+        (e, data)=>{
+            if(e){
+                res.json({status:false})
+            }else{
+                res.json(data[0])
+            }
+        }
+    )
+})
 
 module.exports = user
