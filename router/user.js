@@ -367,7 +367,7 @@ user.post("/user/update_transaksi", (req, res)=>{
     )
 })
 
-user.post("user/buat_tugas", (req, res)=>{
+user.post("/user/buat_tugas", (req, res)=>{
     model_tugas.create(req.body).exec(
         (e)=>{
             if(e){
